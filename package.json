@@ -2,9 +2,13 @@
 	"name": "query-string-cli",
 	"description": "Decode & encode URL query strings in the command line.",
 	"version": "0.1.0",
-	"main": "index.js",
+	"bin": {
+		"decode-query-string": "./decode.js",
+		"encode-query-string": "./encode.js"
+	},
 	"files": [
-		"index.js"
+		"decode.js",
+		"encode.js"
 	],
 	"keywords": [
 		"query string",
@@ -23,6 +27,8 @@
 		"node": ">=6"
 	},
 	"dependencies": {
+		"mri": "^1.1.0",
+		"qs": "^6.5.1"
 	},
 	"scripts": {
 		"test": "node test.sh",
