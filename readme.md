@@ -17,8 +17,23 @@ npm install -g query-string-cli
 
 ## Usage
 
-```js
-todo
+```
+Usage:
+    decode-query-string [--json] <encoded-query-string>
+Options:
+    --json  -j  Print JSON instead of an eve-friendly version.
+Examples:
+    decode-query-string 'foo[bar]=A&baz[0]=B&baz[1]=C'
+```
+
+```
+Usage:
+    encode-query-string [--no-encoding] <json>
+Options:
+    --no-encoding   -n  Don't URL-encode the result.
+    --dot-notation  -d  Use the "a.b" notation for objects.
+Examples:
+    encode-query-string -nd '{"foo": {"bar": "A"}, "baz": ["B", "C"]}'
 ```
 
 
