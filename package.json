@@ -1,0 +1,31 @@
+{
+	"name": "query-string-cli",
+	"description": "Decode & encode URL query strings in the command line.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"query string",
+		"url",
+		"decode",
+		"encode",
+		"cli",
+		"command line"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/query-string-cli",
+	"repository": "derhuerst/query-string-cli",
+	"bugs": "https://github.com/derhuerst/query-string-cli/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"scripts": {
+		"test": "node test.sh",
+		"prepublishOnly": "npm test"
+	}
+}
