@@ -1,7 +1,7 @@
 {
 	"name": "query-string-cli",
 	"description": "Decode & encode URL query strings in the command line.",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"bin": {
 		"decode-query-string": "./decode.js",
 		"encode-query-string": "./encode.js"
@@ -24,7 +24,7 @@
 	"bugs": "https://github.com/derhuerst/query-string-cli/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"dependencies": {
 		"mri": "^1.1.0",
