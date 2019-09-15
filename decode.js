@@ -11,7 +11,10 @@ const argv = mri(process.argv.slice(2), {
 	boolean: [
 		'help', 'h',
 		'version', 'v',
-		'json', 'j'
+		'json', 'j',
+		'no-dots',
+		'no-comma',
+		'no-arrays'
 	]
 })
 
@@ -20,7 +23,11 @@ if (argv.help || argv.h) {
 Usage:
     decode-query-string [--json] <encoded-query-string>
 Options:
-    --json  -j  Print JSON instead of an eve-friendly version.
+    --json       -j  Print JSON instead of an eve-friendly version.
+    --delimiter  -d  Character between key/value pairs. Default: &
+    --no-dots        Don't parse \`a.b=foo\` dot notation.
+    --no-comma       Don't parse \`a=foo,bar\` array notation.
+    --no-arrays      Don't parse \`a[1]=foo\` array notation.
 Examples:
     decode-query-string 'foo[bar]=A&baz[0]=B&baz[1]=C'
 \n`)
@@ -43,7 +50,15 @@ if (!encoded) {
 }
 if (encoded[0] === '?') encoded = encoded.slice(1)
 
-const decoded = parse(encoded, {depth: Infinity, arrayLimit: Infinity})
+const delimiter = argv.delimiter || argv.d || '&'
+const allowDots = argv.dots !== false
+const comma = argv.comma !== false
+const parseArrays = argv.arrays !== false
+
+const decoded = parse(encoded, {
+	delimiter, allowDots, comma, parseArrays,
+	depth: Infinity, arrayLimit: Infinity
+})
 
 if (argv.json || argv.j) {
 	process.stdout.write(JSON.stringify(decoded) + '\n')

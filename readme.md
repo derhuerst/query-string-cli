@@ -21,7 +21,11 @@ npm install -g query-string-cli
 Usage:
     decode-query-string [--json] <encoded-query-string>
 Options:
-    --json  -j  Print JSON instead of an eve-friendly version.
+    --json       -j  Print JSON instead of an eve-friendly version.
+    --delimiter  -d  Character between key/value pairs. Default: &
+    --no-dots        Don't parse `a.b=foo` dot notation.
+    --no-comma       Don't parse `a=foo,bar` array notation.
+    --no-arrays      Don't parse `a[1]=foo` array notation.
 Examples:
     decode-query-string 'foo[bar]=A&baz[0]=B&baz[1]=C'
 ```
