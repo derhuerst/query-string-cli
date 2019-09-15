@@ -21,7 +21,10 @@ Usage:
     encode-query-string [--no-encoding] <json>
 Options:
     --no-encoding   -n  Don't URL-encode the result.
+    --delimiter         Character between key/value pairs. Default: &
     --dot-notation  -d  Use the "a.b" notation for objects.
+    --array-format      How to encode arrays. Default: indices
+                          indices, brackets, repeat, comma
 Examples:
     encode-query-string -nd '{"foo": {"bar": "A"}, "baz": ["B", "C"]}'
 \n`)
@@ -47,6 +50,8 @@ const parsed = JSON.parse(json)
 
 const rendered = stringify(parsed, {
 	encode: !(argv['no-encoding'] || argv.n),
-	allowDots: argv['dot-notation'] || argv.d
+	delimiter: argv.delimiter || '&',
+	allowDots: argv['dot-notation'] || argv.d,
+	arrayFormat: argv['array-format'] || 'indices'
 })
 process.stdout.write(rendered + '\n')

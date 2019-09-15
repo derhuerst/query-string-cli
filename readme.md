@@ -35,7 +35,10 @@ Usage:
     encode-query-string [--no-encoding] <json>
 Options:
     --no-encoding   -n  Don't URL-encode the result.
+    --delimiter         Character between key/value pairs. Default: &
     --dot-notation  -d  Use the "a.b" notation for objects.
+    --array-format      How to encode arrays. Default: indices
+                          indices, brackets, repeat, comma
 Examples:
     encode-query-string -nd '{"foo": {"bar": "A"}, "baz": ["B", "C"]}'
 ```
