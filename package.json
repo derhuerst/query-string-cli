@@ -1,4 +1,5 @@
 {
+	"preferGlobal": true,
 	"name": "query-string-cli",
 	"description": "Decode & encode URL query strings in the command line.",
 	"version": "1.0.0",
