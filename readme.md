@@ -3,10 +3,11 @@
 **Decode & encode URL query strings in the command line.**
 
 [![npm version](https://img.shields.io/npm/v/query-string-cli.svg)](https://www.npmjs.com/package/query-string-cli)
-[![build status](https://img.shields.io/travis/derhuerst/query-string-cli.svg)](https://travis-ci.org/derhuerst/query-string-cli)
+[![build status](https://api.travis-ci.org/derhuerst/query-string-cli.svg?branch=master)](https://travis-ci.org/derhuerst/query-string-cli)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/query-string-cli.svg)
-[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
-[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
+![minimum Node.js version](https://img.shields.io/node/v/query-string-cli.svg)
+[![chat with me on Gitter](https://img.shields.io/badge/chat%20with%20me-on%20gitter-512e92.svg)](https://gitter.im/derhuerst)
+[![support me via GitHub Sponsors](https://img.shields.io/badge/support%20me-donate-fa7664.svg)](https://github.com/sponsors/derhuerst)
 
 
 ## Installing
@@ -43,6 +44,8 @@ Options:
 Examples:
     encode-query-string -nd '{"foo": {"bar": "A"}, "baz": ["B", "C"]}'
 ```
+
+*Pro trip:* Use `query-string-cli` in conjunction with [`parse-url-cli`](https://github.com/derhuerst/parse-url-cli).
 
 
 ## Contributing
