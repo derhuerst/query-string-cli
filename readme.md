@@ -45,7 +45,7 @@ Examples:
     encode-query-string -nd '{"foo": {"bar": "A"}, "baz": ["B", "C"]}'
 ```
 
-*Pro trip:* Use `query-string-cli` in conjunction with [`parse-url-cli`](https://github.com/derhuerst/parse-url-cli).
+*Pro tip:* Use `query-string-cli` in conjunction with [`parse-url-cli`](https://github.com/derhuerst/parse-url-cli).
 
 
 ## Contributing
